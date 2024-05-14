@@ -1,0 +1,148 @@
+/* static/style.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.header {
+    background-color: #4a90e2;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.translation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language-selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.select-container {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.select-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.select-container select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.select-container select:hover {
+    background-color: #e0e0e0;
+}
+
+.switch-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.switch-button button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.switch-button button:hover {
+    background-color: #357abd;
+}
+
+.text-area-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.text-area {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.text-area label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.text-area textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-area textarea:focus {
+    background-color: #fff;
+}
+
+button[type="submit"] {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+button[type="submit"]:hover {
+    background-color: #357abd;
+}
