@@ -62,9 +62,18 @@
         function switchLanguages() {
             const srcLangSelect = document.querySelector('select[name="src_lang"]');
             const destLangSelect = document.querySelector('select[name="dest_lang"]');
-            const temp = srcLangSelect.value;
+            const srcText = document.querySelector('textarea[name="text"]');
+            const destText = document.querySelector('textarea[readonly]');
+
+            // Échanger les valeurs des sélections de langues
+            const tempLang = srcLangSelect.value;
             srcLangSelect.value = destLangSelect.value;
-            destLangSelect.value = temp;
+            destLangSelect.value = tempLang;
+
+            // Échanger les textes des zones de texte
+            const tempText = srcText.value;
+            srcText.value = destText.value;
+            destText.value = tempText;
         }
     </script>
 </body>
