@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lingua Franca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Lingua Franca</h1>
+    </div>
+    <div class="container">
+        <form action="/" method="post" class="translation-form">
+            <div class="language-selection">
+                <div class="select-container">
+                    <label for="src_lang">Source Language:</label>
+                    <select name="src_lang">
+                        <option value="auto">Detect Language</option>
+                        {% for code in favorite_languages %}
+                        <option value="{{ code }}" {% if src_lang == code %}selected{% endif %}>{{ languages[code] }} (favorite)</option>
+                        {% endfor %}
+                        <optgroup label="All Languages">
+                        {% for code, name in languages.items() %}
+                        <option value="{{ code }}" {% if src_lang == code %}selected{% endif %}>{{ name }}</option>
+                        {% endfor %}
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="switch-button">
+                    <button type="button" onclick="switchLanguages()">&#8646;</button>
+                </div>
+                <div class="select-container">
+                    <label for="dest_lang">Destination Language:</label>
+                    <select name="dest_lang">
+                        {% for code in favorite_languages %}
+                        <option value="{{ code }}" {% if dest_lang == code %}selected{% endif %}>{{ languages[code] }} (favorite)</option>
+                        {% endfor %}
+                        <optgroup label="All Languages">
+                        {% for code, name in languages.items() %}
+                        <option value="{{ code }}" {% if dest_lang == code %}selected{% endif %}>{{ name }}</option>
+                        {% endfor %}
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="text-area-container">
+                <div class="text-area">
+                    <label for="text">Enter text:</label>
+                    <textarea id="text" name="text" rows="4">{{ original_text }}</textarea>
+                </div>
+                <div class="text-area">
+                    <label for="translation">Translation:</label>
+                    <textarea id="translation" readonly rows="4">{{ translation }}</textarea>
+                </div>
+            </div>
+            <button type="submit">Translate</button>
+        </form>
+    </div>
+
+    <script>
+        function switchLanguages() {
+            const srcLangSelect = document.querySelector('select[name="src_lang"]');
+            const destLangSelect = document.querySelector('select[name="dest_lang"]');
+            const temp = srcLangSelect.value;
+            srcLangSelect.value = destLangSelect.value;
+            destLangSelect.value = temp;
+        }
+    </script>
+</body>
+</html>
