@@ -25,6 +25,8 @@ language barriers.
 Whether simple sentences or complex technical documents, the
 translation of texts has become an essential tool for
 companies and governments.
+
 This problem having aroused our curiosity, we decide to create our
 own text translation tool. we know this is clearly not
-an easy task, we will neither translate the text yourself, nor use artificial intelligence models to translate it automatically. What to do? Well don’t panic! We used an API to do this!
+an easy task, we will neither translate the text yourself, nor use artificial intelligence models to translate it automatically.
+What to do? Well don’t panic! We used an API to do this!
