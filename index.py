@@ -39,4 +39,4 @@ def index():
     return render_template('teamplate.html', translation=translation, languages=LANGUAGES, favorite_languages=FAVORITE_LANGUAGES, src_lang=src_lang, dest_lang=dest_lang, original_text=original_text, history=session['history'])
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
