@@ -1,4 +1,6 @@
-# Translation, an ancient art
+# Lingua Franca
+
+## Translation, an ancient art
 
 ### The history of translation is almost as old as that of the language written. Over the centuries, peoples and societies have developed languages spoken. Since these peoples have been confronted with to each other, they have developed translation methods to be able to communicate. Translation of texts has played a crucial role in facilitating communication and knowledge sharing between different cultures.
 
